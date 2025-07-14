@@ -25,10 +25,10 @@ class GuitarPractice {
     public function displaySummary() {
         echo "<h3>Practice Session on {$this->practiceDate}</h3>";
         echo "<ul>";
-        echo "<li>Technique Practiced: {$this->technique} ({$this->techniqueMinutes} minutes)</li";
+        echo "<li>Technique Practiced: {$this->technique} ({$this->techniqueMinutes} minutes) </li";
         echo "<li>Total practice time: " . $this->calculateTotalTime() . " minutes</li>";
         echo "<li>" . $this->checkRecording() . "</li>";
-        echo "/ul>";
+        echo "</ul>";
     }
 
     //Method for total practice time
@@ -52,5 +52,29 @@ class GuitarPractice {
         }
     }
 }
+
+//2 Session objects
+$session1 = new GuitarPractice(
+    "2025-07-09",
+    "Strumming techinque",
+    25,
+    "Nirvana: All Apologies",
+    15,
+    true
+);
+
+$session1 = new GuitarPractice(
+    "2025-07-09",
+    "Hendrix-style chords & Unison bends",
+    20,
+    "No One Knows - Queens of the Stone Age",
+    52,
+    false
+);
+
+//Display Sessions
+echo "<h2>Guitar Practice Sessions</h2>";
+//Display session 1
+$session1->displaySummary();
 
 ?>
