@@ -63,7 +63,7 @@ $session1 = new GuitarPractice(
     true
 );
 
-$session1 = new GuitarPractice(
+$session2 = new GuitarPractice(
     "2025-07-09",
     "Hendrix-style chords & Unison bends",
     20,
@@ -77,4 +77,16 @@ echo "<h2>Guitar Practice Sessions</h2>";
 //Display session 1
 $session1->displaySummary();
 
+//Display session 2
+$session2->displaySummary();
+//Updated technique for Session2
+$session2->updateTechnique("Barre chords and sweep picking", 85);
+//Show updated total time for session 2
+echo "<p>Session 2 total time: " . $session2->calculateTotalTime() . " minutes</p>";
+//Check recording status for session 2
+echo "<p>" . $session2->checkRecording() . "</p>"
+
+
+//--Predictions--
+// From what I can comprehend, I think my output will be in the similar style of the main example given for the homework, just based on Guitar practice.
 ?>
